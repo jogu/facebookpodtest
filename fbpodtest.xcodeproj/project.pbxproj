@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010FF76EAFAB5AAC4576D1A7 /* Pods_fbpodtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B51007C5FCD049B1E1FC44 /* Pods_fbpodtest.framework */; };
+		5338B3E8F0107D59E045FF9C /* libPods-fbpodtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21521374EF15AF5B806D5852 /* libPods-fbpodtest.a */; };
 		7CD75F362066B6290025C774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD75F352066B6290025C774 /* AppDelegate.swift */; };
 		7CD75F382066B6290025C774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD75F372066B6290025C774 /* ViewController.swift */; };
 		7CD75F3B2066B6290025C774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD75F392066B6290025C774 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62B51007C5FCD049B1E1FC44 /* Pods_fbpodtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbpodtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21521374EF15AF5B806D5852 /* libPods-fbpodtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fbpodtest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD75F322066B6290025C774 /* fbpodtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbpodtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD75F352066B6290025C774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CD75F372066B6290025C774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010FF76EAFAB5AAC4576D1A7 /* Pods_fbpodtest.framework in Frameworks */,
+				5338B3E8F0107D59E045FF9C /* libPods-fbpodtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		E54111008C04CB803ABE8767 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				62B51007C5FCD049B1E1FC44 /* Pods_fbpodtest.framework */,
+				21521374EF15AF5B806D5852 /* libPods-fbpodtest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 				7CD75F2E2066B6290025C774 /* Sources */,
 				7CD75F2F2066B6290025C774 /* Frameworks */,
 				7CD75F302066B6290025C774 /* Resources */,
-				0748BE33C44053C087060C2E /* [CP] Embed Pods Frameworks */,
+				51ADACEF97B21A0B754132BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,26 +158,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0748BE33C44053C087060C2E /* [CP] Embed Pods Frameworks */ = {
+		51ADACEF97B21A0B754132BB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7352E64F6D1480B967C904F9 /* [CP] Check Pods Manifest.lock */ = {
